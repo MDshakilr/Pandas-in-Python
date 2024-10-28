@@ -1,0 +1,238 @@
+# Pandas -DataFrames
+'''
+The Pandas DataFrame is a Two-dimensional tabular data structure i.e. table with rows and columns. The DataFrame() method is used for this purpose and has the following parameters:
+
+data: The data to be stored in the Pandas DataFrame
+index: The index values to be provided for the resultant frame.
+columns: Set the column labels for the resultant frame if data does not mention before
+dtype: It is the datatype and only a single type is allowed.
+copy: To copy the input data
+'''
+
+
+
+
+
+
+
+#01
+#Create a Pandas DataFrame
+import pandas as pd
+
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data)
+print("student record\n\n", df)
+
+
+#02
+#Access a group of rows or columns in a Pandas DataFrame
+#The dataframe(.loc) is used in Pandas to access a group of rows or columns in a DataFrame
+import pandas as pd
+
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+
+print("value:",df.loc['Row2','Score'])
+print("value:",df.loc['Row2','Student'])
+
+
+#03
+#Access a group of rows or columns by integer positions in a Pandas DataFrame
+#The dataframe(.iloc )is used to access a group of rows or columns by integers. We have also set columns and indexes
+import pandas as pd
+
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+
+print("value:",df.iloc[[1,2]])#0,1,2(0=1,1=3,2=2)
+
+
+
+
+#04
+#Name your indexes in a Pandas DataFrame
+#The index argument is used to set and name your indexes in a DataFrame
+import pandas as pd
+
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Student1', 'Student2', 'Student3',])
+print("student record\n\n", df)
+
+
+#05
+#Iterate a DataFrame
+
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Student1', 'Student2', 'Student3',])
+print("student record\n\n", df)
+
+# Iterating to display the columns
+print("\nDisplaying the columns:")
+for col in df:
+   print(col)
+
+
+
+
+
+'''
+DataFrame – Attributes and Methods
+
+dtypes: Return the dtypes in the DataFrame
+ndim: Return the number of dimensions of the DataFrame
+size: Return the number of elements in the DataFrame.
+shape: Return the dimensionality of the DataFrame in the form of a tuple.
+index: Return the index of the DataFrame
+T: Transpose the rows and columns
+head(): Return the first n rows.
+tail(): Return the last n rows.
+'''
+
+#06
+#datatype
+import pandas as pd
+
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+print(df.dtypes)
+
+
+#07
+#Dimensions
+import pandas as pd
+
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+print(df.ndim)
+
+
+#08
+#The pandas.DataFrame.size is used to return the number of elements in the DataFrame.
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+print(df.size)
+
+
+
+#09
+#shape
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+print(df.shape)
+
+#10
+#index
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+print(df.index)
+
+
+#11
+#The pandas.DataFrame.T is used to Transpose the rows and columns.
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik"],
+    'Rank': [1, 3, 2],
+    'Score': [96, 67, 88]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3'])
+print("student record\n\n", df)
+print(df.T)
+
+
+
+#12
+#The pandas.DataFrame.head() is used to return the first n rows.
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik","ridoy","rafi","arif","noion"],
+    'Rank': [1, 3, 2,5,4,6,7],
+    'Score': [96, 67, 88,44,43,42,41]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3','Row4','Row5','Row6','Row7'])
+print("student record\n\n", df)
+
+
+print(df.head())#defult 5 index
+print(df.head(3))
+
+
+#13
+#The pandas.DataFrame.tail() is used to return the last n rows.
+import pandas as pd
+data = {
+    'Student': ["shakil", "tamim", "ashik","ridoy","rafi","arif","noion"],
+    'Rank': [1, 3, 2,5,4,6,7],
+    'Score': [96, 67, 88,44,43,42,41]
+}
+
+df = pd.DataFrame(data, index=['Row1','Row2','Row3','Row4','Row5','Row6','Row7'])
+print("student record\n\n", df)
+
+
+#defult 5 index
+print(df.tail())
+print(df.tail(2))
