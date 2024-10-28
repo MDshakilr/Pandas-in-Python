@@ -1,0 +1,24 @@
+'''
+
+Pandas is a powerful and easy-to-use open-source tool
+built on top of the  Python programming language.
+It is useful for data analysis and manipulation.
+Python with pandas is widely used in Statistics,
+Finance,Neuroscience, Economics, Web Analytics, Advertising, etc.
+
+
+Pandas Features:
+Analyze Data
+Manipulate Data
+Columns can be inserted and deleted from DataFrame
+Group the rows/ columns of a DataFrame/ Series
+Plotting is possible
+Read CSV/ JSON
+Fix the inaccurate data
+Clean the Data completely
+Easy to handle the missing data in the form: NaN, NA, or NaT
+'''
+#pandas topic
+
+1.pandas introduction
+2.Dataframe
