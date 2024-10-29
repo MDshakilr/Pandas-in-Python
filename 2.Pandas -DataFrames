@@ -236,3 +236,51 @@ print("student record\n\n", df)
 #defult 5 index
 print(df.tail())
 print(df.tail(2))
+
+
+
+#14
+#Join Pandas DataFrame
+import pandas as pd
+data1 = {
+     "Student":["shakil","saim","siam"],
+     "Age":[23,22,12],
+     "Id":[1235,1234,6783]
+ }
+data2={
+    'rank':[1,2,3],
+    'Mark':[89,87,86]
+}
+df1 = pd.DataFrame(data1)
+#print(df1)
+df2 = pd.DataFrame(data2)
+#print(df2)
+
+join=df1.join(df2)
+print(join)
+
+
+
+#15
+
+#Concatenate Pandas DataFrames
+
+
+import pandas as pd
+data1 = {
+     "Student":["shakil","saim","siam"],
+     "Age":[23,22,12],
+     "Id":[1235,1234,6783]
+ }
+data2={
+"Student":["shakil","saim","siam"],
+     "Age":[23,22,12],
+     "Id":[1235,1234,6783]
+}
+df1 = pd.DataFrame(data1,index=[0,1,2])
+#print(df1)
+df2 = pd.DataFrame(data2,index=[3,4,5])
+#print(df2)
+
+concatenate=pd.concat([df1,df2])
+print(concatenate)
