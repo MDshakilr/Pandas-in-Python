@@ -1,0 +1,57 @@
+'''
+Series in Pandas is a one-dimensional array, like a column in a table. It is a labeled array that can hold data of any type. The Series() method is used for this and has the following parameters:
+
+data: The data to be stored in the Pandas Series
+index: The index values should have the same length as the data.
+dtype: It is the datatype for the output Series.
+name: Set the series name with the name parameter
+copy: To copy the input data
+'''
+
+
+#01
+#Create a Pandas Series
+
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data)
+print(result)
+
+#02
+#Access a value from a Pandas Series
+#Set the index of the value you want to display inside []:
+
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data)
+#print(result)
+print( "\n\nserach a index value:",result[2])
+print( "\n\nserach a index value:",result[0])
+
+
+#03
+#Name your own(custom) indexes in a Pandas Series
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data,index=["r0","r1","r2","r3","r4","r5"])
+print(result)
+
+#04
+#Access a value from a Pandas Series with labels
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data,index=["r0","r1","r2","r3","r4","r5"])
+print(result["r3"])
+'''
+Pandas Series – Attributes and Methods
+
+dtype: Return the dtype.
+ndim: Return the Number of dimensions
+size: Return the number of elements.
+name: Return the name of the Series.
+hasnans: Returns True if NaNs are in the series.
+index: The index of the series
+head(): Return the first n rows.
+tail(): Return the last n rows.
+info(): Display the Summary of the series
+'''
