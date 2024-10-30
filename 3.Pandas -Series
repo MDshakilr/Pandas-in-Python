@@ -55,3 +55,131 @@ head(): Return the first n rows.
 tail(): Return the last n rows.
 info(): Display the Summary of the series
 '''
+
+#05
+#dtype: Return the dtype.
+
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data)
+print(result.dtype)
+
+#06
+#ndim: Return the Number of dimensions
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data)
+print(result.ndim)
+
+
+#07
+#size: Return the number of elements.
+import pandas as pd
+data=[10,24,56,45,64,90]#6
+result=pd.Series(data)
+print(result.size)
+
+#08
+
+#name: Return the name of the Series.
+
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data,name="my number serics:")
+print(result)
+print(result.name)
+
+
+#09
+#hasnans: Returns True if NaNs are in the series.
+import numpy as np
+import pandas as pd
+data=[10,24,56,45,64,90, np.nan]
+result=pd.Series(data,name="my number serics:")
+print(result)
+print(result.hasnans)
+
+
+#10
+#index: The index of the series
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data,index=["r0","r1","r2","r3","r4","r5"])
+print(result.index)
+
+#11
+#head(): Return the first n rows.
+
+import pandas as pd
+data=[10,24,56,45,64,90,45,66,88]
+result=pd.Series(data)
+print(result.head())
+
+#12
+#tail(): Return the last n rows.
+import pandas as pd
+data=[10,24,56,45,64,90,45,66,88]
+result=pd.Series(data)
+print("\n\n",result.tail())
+
+
+#13
+#info(): Display the Summary of the series
+import pandas as pd
+data=[10,24,56,45,64,90]
+result=pd.Series(data,index=["r0","r1","r2","r3","r4","r5"])
+print(result.info())
+
+
+
+
+#Append two Pandas Series
+
+
+#14
+#Append two Pandas series considering the original index
+'''
+import pandas as pd
+data1 = [10, 20, 40, 80, 100]
+data2 = [150, 200]
+series1 = pd.Series(data1, index = ["RowA", "RowB", "RowC", "RowD", "RowE"])
+series2 = pd.Series(data2, index = ["RowF", "RowG"])
+result = series1.append(series2,ignore_index = True)
+print(result)
+'''
+#To append two pandas Series objects, you can use pd.concat(), as append() is deprecated.
+import pandas as pd
+
+# Sample data
+data1 = [10, 20, 30]
+data2 = [40, 50]
+
+# Create Series
+series1 = pd.Series(data1, index=["A", "B", "C"])
+series2 = pd.Series(data2, index=["D", "E"])
+
+# Append using concat
+result = pd.concat([series1, series2])
+
+print(result)
+
+
+#15
+#append new catagory
+
+
+import pandas as pd
+s=pd.Series(["a","d","e"],dtype="category")
+#append a catagory
+s=s.cat.add_categories("t")
+print(s)
+
+
+#16
+#remove categories
+
+import pandas as pd
+s=pd.Series(["a","d","e"],dtype="category")
+#append a catagory
+s=s.cat.remove_categories("a")
+print(s)
