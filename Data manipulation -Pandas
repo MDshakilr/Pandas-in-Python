@@ -1,0 +1,36 @@
+#Select multiple columns in a Pandas DataFrame
+
+
+#Select two columns
+
+import pandas as pd
+data ={
+    'Student': ["shakil","rafi","mahabub","pranto","minhaj"],
+     'Rank':[1,4,3,5,2],
+    'Score': [95,60,80,55,87]
+
+}
+df= pd.DataFrame(data)
+print(df)
+print("\n",df[['Rank','Score']])
+
+
+
+
+#Select multiple columns in a range
+
+import pandas as pd
+data ={
+
+     'Id': ["S01", "S02", "S03", "S04", "S05"],
+    'Student': ["shakil","rafi","mahabub","pranto","minhaj"],
+     'Rank':[1,4,3,5,2],
+    'Score': [95,60,80,55,87],
+'Address': ["East", "North", "West", "South", "SouthWest"]
+
+}
+df= pd.DataFrame(data)
+print(df)
+print("\n",df[df.columns[2:5]])
+
+
