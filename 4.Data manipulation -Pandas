@@ -40,6 +40,58 @@ print("\n",df[df.columns[2:5]])
 
 
 
+
+
+#Add a new column to Pandas DataFrame
+
+
+
+
+#Add a new column using insert()  (giving location)
+import pandas as pd
+
+# Dataset
+data = {
+    'id': ["S01", "S02", "S03", "S04", "S05"],
+    'student': ["Amit", "John", "Jacob", "David", "Steve"],
+    'rank': [1, 4, 3, 5, 2],
+    'marks': [95, 70, 80, 60, 90]
+}
+
+dataFrame = pd.DataFrame(data)
+print("Student Records\n\n", dataFrame)
+
+# Insert a new column using the insert() method
+# The location set is 2 i.e. 2nd index i.e. 3rd position
+dataFrame.insert(2, "roll", [101, 102, 103, 104, 105])
+
+# DataFrame after adding a new column
+print("\nUpdated DataFrame:\n", dataFrame)
+
+
+
+#Assign a new column using assign()  (add in end)
+
+import pandas as pd
+data = {
+    'id': ["S01", "S02", "S03", "S04", "S05"],
+    'student': ["Amit", "John", "Jacob", "David", "Steve"],
+    'rank': [1, 4, 3, 5, 2],
+    'marks': [95, 70, 80, 60, 90]
+}
+
+df = pd.DataFrame(data)
+print(df)
+result=df.assign(roll =[101, 102, 103, 104, 105])
+print(result)
+
+
+
+
+
+
+
+
 #Delete rows/ columns in a Pandas DataFrame
 
 
@@ -93,51 +145,5 @@ print("\n", resDF)
 
 
 
-
-
-
-
-#Add a new column to Pandas DataFrame
-
-
-
-
-#Add a new column using insert()  (giving location)
-import pandas as pd
-
-# Dataset
-data = {
-    'id': ["S01", "S02", "S03", "S04", "S05"],
-    'student': ["Amit", "John", "Jacob", "David", "Steve"],
-    'rank': [1, 4, 3, 5, 2],
-    'marks': [95, 70, 80, 60, 90]
-}
-
-dataFrame = pd.DataFrame(data)
-print("Student Records\n\n", dataFrame)
-
-# Insert a new column using the insert() method
-# The location set is 2 i.e. 2nd index i.e. 3rd position
-dataFrame.insert(2, "roll", [101, 102, 103, 104, 105])
-
-# DataFrame after adding a new column
-print("\nUpdated DataFrame:\n", dataFrame)
-
-
-
-#Assign a new column using assign()  (add in end)
-
-import pandas as pd
-data = {
-    'id': ["S01", "S02", "S03", "S04", "S05"],
-    'student': ["Amit", "John", "Jacob", "David", "Steve"],
-    'rank': [1, 4, 3, 5, 2],
-    'marks': [95, 70, 80, 60, 90]
-}
-
-df = pd.DataFrame(data)
-print(df)
-result=df.assign(roll =[101, 102, 103, 104, 105])
-print(result)
 
 
