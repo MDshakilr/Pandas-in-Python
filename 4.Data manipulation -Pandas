@@ -183,3 +183,28 @@ for i in dataFrame.itertuples():
 
 
 
+
+#Iterate over columns
+
+
+#Pandas items() to iterate over columns
+
+import pandas as pd
+
+# Dataset
+data = {
+    'id': ["S01", "S02", "S03", "S04", "S05"],
+    'student': ["Amit", "John", "Jacob", "David", "Steve"],
+    'rank': [1, 4, 3, 5, 2]
+}
+
+dataFrame = pd.DataFrame(data)
+print("Student Records\n",dataFrame)
+
+# Iterate over columns in the DataFrame
+for a, b in dataFrame.items():
+    print(a)
+    print(b)
+
+
+
