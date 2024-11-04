@@ -1,0 +1,76 @@
+'''
+String Operations on Text Data in Pandas
+
+We can easily perform operations on strings in Pandas using the string methods. In this lesson, we will see how to perform the following string operations on text data in Pandas Series:
+
+lower(): Perform lowercase on text data
+upper(): Perform uppercase on text data
+title(): Convert text data to camel case
+len(): To get the length of each element in the Series.
+count(): Count the non-empty cells for each column or row
+contain(): Search for a value in a column.
+'''
+
+#01:
+#lower() method
+import pandas as pd
+data=["Shakil","RANA","Asif"]
+s=pd.Series(data)
+print(s)
+res=s.str.lower()
+print(res)
+
+#02
+#upper() method
+import pandas as pd
+data=["shakil","rana","asif"]
+s=pd.Series(data)
+print(s)
+res=s.str.upper()
+print(res)
+
+
+#03
+#title() method (To convert the text data to camel case, use the title() method in Pandas. )
+import pandas as pd
+data=["shakIl","raNa","aSif"]
+s=pd.Series(data)
+print(s)
+res=s.str.title()
+print(res)
+
+
+#04
+#len() method
+import pandas as pd
+data=["shakIl","raNa","aSif"]
+s=pd.Series(data)
+print(s)
+res=s.str.len()
+print(res)
+
+#05
+#count() method
+#To count the non-empty cells for each column or row in a Series, use the count() method.
+
+import numpy as np
+import pandas as pd
+data=[np.nan,"shakIl","raNa","aSif","harun",np.nan]
+s=pd.Series(data)
+print(s)
+res=s.count()
+print(res)#element 4
+
+
+
+#06
+#contains() method(The contains() method is used in Pandas to search for a value in a column.)
+
+import pandas as pd
+data=["shakIl","raNa","aSif"]
+s=pd.Series(data)
+print(s)
+res=s.str.contains("aSif")
+print(res)
+
+
