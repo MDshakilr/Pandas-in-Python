@@ -144,6 +144,42 @@ print("\n", resDF)
 
 
 
+#Iterate over rows and columns in a Pandas DataFrame
+
+
+
+#Pandas iterrows() to iterate over rows
+
+import pandas as pd
+data = {
+  'id': ["S01", "S02", "S03", "S04", "S05"],
+  'student': ["Amit", "John", "Jacob", "David", "Steve"],
+  'rank': [1, 4, 3, 5, 2]
+}
+df= pd.DataFrame(data)
+print(df)
+for i in df.iterrows():
+    print(i)
+
+
+
+#Pandas itertuples() to iterate over rows
+import pandas as pd
+
+# Dataset
+data = {
+    'id': ["S01", "S02", "S03", "S04", "S05"],
+    'student': ["Amit", "John", "Jacob", "David", "Steve"],
+    'rank': [1, 4, 3, 5, 2]
+}
+
+dataFrame = pd.DataFrame(data)
+print( dataFrame)
+
+# Iterate over rows in the DataFrames
+
+for i in dataFrame.itertuples():
+    print(i)
 
 
 
