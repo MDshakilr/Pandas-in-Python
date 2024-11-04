@@ -1,0 +1,31 @@
+#Find Duplicates
+
+import pandas as pd
+data= {
+    'Name' : ["shakil","rana","asif","mahatab","asif"],
+'Roll' :[1,2,3,4,3],
+'age':[34,67,32,55,32]
+
+}
+df=pd.DataFrame(data)
+print(df)
+
+result= df.duplicated()
+print(result)
+
+
+
+#Remove Duplicates
+
+import pandas as pd
+data= {
+    'Name' : ["shakil","rana","asif","mahatab","asif"],
+'Roll' :[1,2,3,4,3],
+'age':[34,67,32,55,32]
+
+}
+df=pd.DataFrame(data)
+print(df)
+
+result= df.drop_duplicates()
+print(result)
