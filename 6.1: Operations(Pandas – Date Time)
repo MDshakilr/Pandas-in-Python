@@ -1,1 +1,91 @@
 
+#data time
+'''
+Get the current date and time
+Get the day of the week
+Get the day of the year
+Get the number of days in a month
+Check if the year is a leap year
+Check if the date is the last day of the month
+Check if the date is the first day of the month
+Check if the date is the last day of the year
+Check if the date is the first day of the year
+'''
+
+
+#01
+#Get the current date and time
+import pandas as pd
+res=pd.Timestamp.now()
+print(res)
+
+#02
+#et the day of the week
+import pandas as pd
+timeStamp = pd.Timestamp(2024, 10, 10)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.dayofweek)
+
+
+#03
+#Get the day of the year
+import pandas as pd
+timeStamp = pd.Timestamp(2024, 10, 10)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.dayofyear)
+
+
+
+#04
+#Get the number of days in a month
+import pandas as pd
+timeStamp = pd.Timestamp(2024, 11, 5)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.daysinmonth)
+
+#05
+#Check if the year is a leap year
+
+
+import pandas as pd
+timeStamp = pd.Timestamp(2024, 11, 5)
+#timeStamp = pd.Timestamp(2024, 11, 5)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.is_leap_year)
+
+
+#06
+#Check if the date is the last day of the month
+import pandas as pd
+timeStamp = pd.Timestamp(2024, 11, 5)
+#timeStamp=pd.Timestamp(2024,12,31)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.is_month_end)
+
+#07
+#Check if the date is the first day of the month
+import pandas as pd
+timeStamp = pd.Timestamp(2024, 11, 5)
+#timeStamp=pd.Timestamp(2024,12,1)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.is_month_start)
+
+#08
+#Check if the date is the last day of the year
+
+import pandas as pd
+timeStamp=pd.Timestamp(2024,11,5)
+#timeStamp=pd.Timestamp(2024,12,31)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.is_year_end)
+
+
+#09
+#Check if the date is the first day of the year
+import pandas as pd
+#timeStamp=pd.Timestamp(2024,11,5)
+timeStamp=pd.Timestamp(2025,1,1)
+print("Date and Time = ", timeStamp)
+print("Day of Week = ", timeStamp.is_year_start)
+
+
