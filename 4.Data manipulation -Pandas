@@ -191,7 +191,6 @@ for i in dataFrame.itertuples():
 
 import pandas as pd
 
-# Dataset
 data = {
     'id': ["S01", "S02", "S03", "S04", "S05"],
     'student': ["Amit", "John", "Jacob", "David", "Steve"],
@@ -207,4 +206,39 @@ for a, b in dataFrame.items():
     print(b)
 
 
+
+
+#Sorting in pandas
+
+
+
+#Sort the Pandas DataFrame (default ascending order)
+
+import pandas as pd
+
+data = {
+    'id': ["S01", "S02", "S03", "S04", "S05"],
+    'student': ["Amit", "John", "Jacob", "David", "Steve"],
+    'Rank': [1, 4, 3, 5, 2]
+}
+
+dataFrame = pd.DataFrame(data,index=['RowA', 'RowB', 'RowC', 'RowD', 'RowE'])
+print(dataFrame)
+print("\n",dataFrame.sort_values(by=['Rank']))
+
+
+
+#Sort the Pandas DataFrame in Descending Order
+
+import pandas as pd
+
+data = {
+    'id': ["S01", "S02", "S03", "S04", "S05"],
+    'student': ["Amit", "John", "Jacob", "David", "Steve"],
+    'Rank': [1, 4, 3, 5, 2]
+}
+
+dataFrame = pd.DataFrame(data,index=['RowA', 'RowB', 'RowC', 'RowD', 'RowE'])
+print(dataFrame)
+print("\n",dataFrame.sort_values(by=['Rank'],ascending=False))
 
