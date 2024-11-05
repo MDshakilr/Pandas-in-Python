@@ -1,0 +1,127 @@
+#Pandas – Statistical Functions
+'''
+sum(): Return the sum of the values.
+count(): Return the count of non-empty values.
+max(): Return the maximum of the values.
+min(): Return the minimum of the values.
+mean(): Return the mean of the values.
+median(): Return the median of the values.
+std(): Return the standard deviation of the values.
+describe(): Return the summary statistics for each column.
+
+
+'''
+
+
+#01.sum() method
+
+
+
+import pandas as pd
+data = {
+    'Maths': [90, 85, 98, 80, 55, 78],
+    'Science': [92, 87, 59, 64, 87, 96],
+    'English': [95, 94, 84, 75, 67, 65]
+}
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\nSum = \n", df.sum())
+
+
+
+#02. count() method
+
+import pandas as pd
+data = {
+    'Maths': [78, 85, 98, None, 55, 78],
+    'Science': [92, 87, 59, None, None, 96],
+    'English': [95, None, 84, None, 67, None]
+}
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\n", df.count())
+
+
+
+#03. max() method
+
+import pandas as pd
+data = {
+    'Maths': [78, 85, 98, None, 55, 78],
+    'Science': [92, 87, 59, None, None, 96],
+    'English': [95, None, 84, None, 67, None]
+}
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\n", df.max())
+
+
+#04: min() method
+import pandas as pd
+data = {
+    'Maths': [78, 85, 98, None, 55, 78],
+    'Science': [92, 87, 59, None, None, 96],
+    'English': [95, None, 84, None, 67, None]
+}
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\n", df.min())
+
+
+#05: mean() method
+
+
+import pandas as pd
+data = {
+    'Maths': [90, 85, 98, 80, 55, 78],
+    'Science': [92, 87, 59, 64, 87, 96],
+    'English': [95, 94, 84, 75, 67, 65]
+}
+
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\nMean = \n", df.mean()) #average
+
+
+#06: median() method
+
+
+
+import pandas as pd
+data = {
+    'Maths': [90, 85, 98, 80, 55, 78],
+    'Science': [92, 87, 59, 64, 87, 96],
+    'English': [95, 94, 84, 75, 67, 65]
+}
+
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\n=median \n", df.median())
+
+
+#07 std() method
+
+import pandas as pd
+data = {
+    'Maths': [90, 85, 98, 80, 55, 78],
+    'Science': [92, 87, 59, 64, 87, 96],
+    'English': [95, 94, 84, 75, 67, 65]
+}
+
+df = pd.DataFrame(data)
+print("DataFrame = \n", df)
+print("\nstandard deviation = \n", df.std())
+
+
+
+#08 describe() method
+
+import pandas as pd
+data = {
+    'Maths': [90, 85, 98, None, 55, 78],
+    ' Science': [92, 87, 59, None, None, 96],
+    'English': [95, None, 84, 75, 67, None]
+}
+df = pd.DataFrame(data)
+print( df)
+print( df.describe())
