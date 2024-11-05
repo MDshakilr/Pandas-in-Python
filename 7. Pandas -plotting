@@ -1,0 +1,93 @@
+#Pandas – Plotting
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Temperature': [18, 20, 22, 19, 23, 24, 28, 26, 17, 25],
+    'Humidity': [32, 31, 30, 22, 17, 29, 32, 27, 20, 19],
+    'Wind': [11, 20, 8, 9, 30, 27, 22, 33, 37, 35],
+    'Precipitation': [17, 25, 20, 19, 18, 30, 28, 26, 29, 22]
+}
+df = pd.DataFrame(data)
+df.plot()
+plt.show()
+
+#Example
+'''
+1.Histogram
+2.Pie Chart
+3.Scatter Plot
+4.Area Plot
+'''
+
+#1.Histogram
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Temperature': [17, 20, 22, 19, 23, 24, 28, 26, 17, 25],
+    'Humidity': [32, 31, 30, 22, 17, 29, 32, 27, 20, 19],
+    'Wind': [12, 20, 8, 9, 30, 27, 22, 33, 37, 35],
+    'Precipitation': [17, 25, 20, 19, 18, 30, 28, 26, 29, 22]
+}
+
+df = pd.DataFrame(data)
+
+df["Humidity"].plot(kind='hist')
+
+plt.show()
+
+
+#2.Pie Chart
+
+import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+    'Temperature': [19, 20, 22, 19, 23, 24, 28, 26, 17, 25],
+    'Humidity': [32, 31, 30, 22, 17, 29, 32, 27, 20, 19],
+    'Wind': [12, 20, 8, 9, 30, 27, 22, 33, 37, 35],
+    'Precipitation': [17, 25, 20, 19, 18, 30, 28, 26, 29, 22]
+}
+
+df = pd.DataFrame(data, index=['City1', 'City2', 'City3', 'City4', 'City5', 'City6', 'City7', 'City8', 'City9', 'City10'])
+df.plot.pie(y='Humidity')
+plt.show()
+
+
+
+
+#3.Scatter Plot
+
+import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+    'Temperature': [18, 20, 22, 19, 23, 24, 28, 26, 17, 25],
+    'Humidity': [32, 31, 30, 22, 17, 29, 32, 27, 20, 19],
+    'Wind': [12, 20, 8, 9, 30, 27, 22, 33, 37, 35],
+    'Precipitation': [17, 25, 20, 19, 18, 30, 28, 26, 29, 22]
+}
+
+df = pd.DataFrame(data)
+df.plot(kind='scatter', x='Temperature', y='Humidity')
+plt.show()
+
+
+
+
+
+#04. Area Plot
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Temperature': [18, 20, 22, 19, 23, 24, 28, 26, 17, 25],
+    'Humidity': [31, 31, 30, 22, 17, 29, 32, 27, 20, 19],
+    'Wind': [12, 20, 8, 9, 30, 27, 22, 33, 37, 35],
+    'Precipitation': [17, 25, 20, 19, 18, 30, 28, 26, 29, 22]
+}
+df = pd.DataFrame(data)
+df.plot.area()
+plt.show()
