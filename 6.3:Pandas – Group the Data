@@ -1,0 +1,96 @@
+#Pandas – Group the Data
+
+
+
+#Pandas – Split the object and combine the result
+
+
+import pandas as pd
+data = {
+    'Player': ["Amit", "John", "Amit", "David", "Steve", "John"],
+    'Rank': [1, 4, 3, 5, 2, 7],
+    'Year': [2023, 2022, 2021, 2022, 2018, 2019]
+}
+
+df = pd.DataFrame(data)
+print("Player Records\n\n", df)
+res = df.groupby('Player')
+print("\n", res.first())
+
+
+
+#Iterate the Group
+
+
+import pandas as pd
+data = {
+    'Player': ["Amit", "John", "Amit", "David", "Steve", "John"],
+    'Rank': [1, 4, 3, 5, 2, 7],
+    'Year': [2023, 2022, 2021, 2022, 2018, 2019]
+}
+
+df = pd.DataFrame(data)
+print("Player Records\n\n", df)
+groupRes = df.groupby('Player')
+
+for name, group in groupRes:
+    print("\n", name)
+    print(group)
+
+
+#View the Group
+
+import pandas as pd
+data = {
+    'Player': ["Amit", "John", "Amit", "David", "Steve", "John"],
+    'Rank': [1, 4, 3, 5, 2, 7],
+    'Year': [2023, 2022, 2021, 2022, 2018, 2019]
+}
+
+df = pd.DataFrame(data)
+print("Player Records\n\n", df)
+print(df.groupby('Player').groups)
+
+'''
+
+Aggregation Operation on Groups:
+After grouping, we can perform operations on the grouped data using the agg() method. Through this method, get the mean or even get the size of each group, etc. Let’s see some examples:
+
+1.Get the mean of the grouped data
+2.Get the size of each group
+'''
+
+#Get the mean of the grouped data
+
+
+import pandas as pd
+import numpy as np
+data = {
+    'Player': ["Amit", "John", "Amit", "David", "Steve", "John"],
+    'Rank': [1, 4, 3, 5, 2, 7],
+    'Points': [95, 70, 65, 80, 90, 50],
+    'Year': [2023, 2022, 2021, 2022, 2023, 2019]
+}
+df = pd.DataFrame(data)
+print("Player Records\n\n", df)
+
+groupRes = df.groupby('Year')
+print("\n", groupRes['Points'].agg(np.mean))
+
+
+#Get the size of each group
+
+
+import pandas as pd
+import numpy as np
+
+data = {
+    'Player': ["Amit", "John", "Amit", "David", "Steve", "John"],
+    'Rank': [1, 4, 3, 5, 2, 7],
+    'Points': [95, 70, 65, 80, 90, 50],
+    'Year': [2023, 2022, 2021, 2022, 2023, 2019]
+}
+df = pd.DataFrame(data)
+print("Player Records\n\n", df)
+groupRes = df.groupby('Player')
+print("\n", groupRes.agg(np.size))
